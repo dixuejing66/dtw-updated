@@ -1,33 +1,50 @@
 package algorithm;
 public class Trajectory {
-	public long[] times;
-	public Point[] points;
+	public long  timestamp   ;
+	public double longitude   ;
+	public double latitude    ;
 	public Trajectory() {
+		
 	}
-	public Trajectory(Point[] points,long[] times) {
-		this.points = points;
-		this.times = times;
+	public Trajectory(long timestamp, double longitude, double latitude) {
+		super();
+		this.timestamp = timestamp;
+		this.longitude = longitude;
+		this.latitude = latitude;
 	}
-	public Trajectory(Trajectory t) {
-		this.points = t.points;
-		this.times = t.times;
+	public long getTimestamp() {
+		return timestamp;
+	}
+	public void setTimestamp(long timestamp) {
+		this.timestamp = timestamp;
+	}
+	public double getLongitude() {
+		return longitude;
+	}
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
+	public double getLatitude() {
+		return latitude;
+	}
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
 	}
 	
-	public long[] getTimes() {
-		return times;
-	}
-	public void setTimes(long[] times) {
-		this.times = times;
-	}
+	
 	public Point[] getPoints() {
 		return points;
 	}
 	public void setPoints(Point[] points) {
 		this.points = points;
 	}
+
+
+	public Point[] points;
 	
 	public int length() {
 		return points.length;
 	}
+	
 	
 }
